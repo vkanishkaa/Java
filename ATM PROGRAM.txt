@@ -1,0 +1,337 @@
+ATM PROGRAM :
+
+package sample;
+import java.util.Scanner;
+
+class Atm {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int pin = 1234;
+        int tbal = 5000;
+
+        System.out.println("Enter PIN:");
+        int currentPin = sc.nextInt();
+
+        if (currentPin == pin) {
+            System.out.println("Enter amount:");
+            int want = sc.nextInt();
+
+            if (want <= tbal) {
+                System.out.println("Withdraw Success");
+            } else {
+                System.out.println("Insufficient balance");
+            }
+        } else {
+            System.out.println("Invalid PIN");
+        }
+
+        sc.close();
+    }
+}
+---
+CALCULATOR PROGRAM:
+
+package sample;
+
+import java.util.Scanner;
+
+class calc {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        int choice;
+
+        while (true) {
+
+            System.out.println("1. Addition");
+            System.out.println("2. Multiplication");
+            System.out.println("3. Subtraction");
+            System.out.println("4. Division");
+            System.out.println("Enter your choice:");
+
+            choice = sc.nextInt();
+
+ 
+            if (choice >= 1 && choice <= 4) {
+
+                System.out.println("Enter num1:");
+                int value1 = sc.nextInt();
+
+                System.out.println("Enter num2:");
+                int value2 = sc.nextInt();
+
+                switch (choice) {
+                    case 1:
+                        System.out.println("Result: " + (value1 + value2));
+                        break;
+
+                    case 2:
+                        System.out.println("Result: " + (value1 * value2));
+                        break;
+
+                    case 3:
+                        System.out.println("Result: " + (value1 - value2));
+                        break;
+
+                    case 4:
+                        System.out.println("Result: " + (value1 / value2));
+                        break;
+                }
+
+            } else {
+                System.out.println("Enter valid choice");
+            }
+        }
+    }
+}
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+ ARRAY IN JAVA :
+        * It is a collection of same datatype values stored in a single variable created by using []
+           types of declaration
+             1. Instantiation
+             2. Intalization
+        * We can access array value by using index . Index strats with 0 and ends with -1
+
+ syntax:
+  public class SingleArray {
+    public static void main (String[] args) {
+  //datatype vn[]=new datatype[size];
+  //datatype[] vn={//actuall values
+}
+---
+PROGRAM 1:
+public class SingleArray {
+    public static void main (String[] args) {
+        int[] arr=new int[3];
+        arr[0]=1;
+        arr[1]=2;
+        arr[2]=3;
+        System.out.println(arr[0]);
+        System.out.println(arr.length);
+        for(int i=0;i<arr,length;i++)
+        System.out.println(arr[i]);
+}
+}
+---
+PROGRAM 2: print the value given in the array
+
+public class SingleArray {
+public static void main (String[] args) {
+        int[] arr= {10,20,30,40,50};
+ 
+        for(int i=arr.length-1;i>=0;i--) {
+        System.out.println(arr[i]);
+}
+        }
+}
+---
+PROGRAM 3:it will print continuous 5 values
+
+import java.util.*;
+
+public class SingleArray {
+public static void main (String[] args) {
+ 	Scanner ref=new Scanner(System.in);
+ 	System.out.println("enter the values?");
+        int[] arr=new int[5];
+ 
+        for(int i=0;i<=arr.length-1;i++) {
+        	arr[i]=ref.nextInt();
+        System.out.println(arr[i]);
+}
+        }
+}
+o/p:enter the values?
+23
+23
+56
+56
+21
+21
+98
+98
+655
+655
+
+---
+PROGRAM 4:MULTIDIMENSIONAL ARRAY:
+
+
+public class SingleArray {
+public static void main (String[] args) {
+ 	int n=3;
+ 	for(int i=1;i<=n;i++) {
+ 		for(int j=1;j<=i;j++) {
+ 		System.out.print(j);
+ 	}
+ 	System.out.println("");
+ 
+}
+        }
+}
+o/p
+1
+12
+123
+
+---
+PROGRAM 5: pattern:
+
+
+public class SingleArray {
+public static void main (String[] args) {
+ 	int n=3;
+ 	for(int i=1;i<=n;i++) {
+ 		for(int j=1;j<=i;j++) {
+ 			System.out.print(i);
+ 		}
+ 	System.out.println("");
+ 
+}
+ 		}
+ 
+}
+o/p:
+1
+22
+333
+---
+---------------------------------------------------------------------
+STRINGS : 
+
+   In java strings are used to store group of characters , written inside " "(double quotes)and also strings are immutable.
+Declaration part: Two ways 
+
+string literal - string constant pool memory 
+syntax : String variable name =" ";
+
+using new keyword - heap memory  
+   Syntax : String variable name = new String (" ");
+
+Methods:
+Length method : Returns total number of characters
+Character (index): it returns character based on given index
+Equals (): compares the memory address of 2 strings
+
+program :
+ class StringClass {
+      public static void main (String[] args ){
+    	  String s1="java";
+    	  String s2 =new String (original: "java");
+          for (int i=s1.length()-1;i>=0;i--) {
+        	  System.out.println(s1.charAt(i));
+              int character=s1.CharAt(i);
+              if(character == 'a'|| character == 'e') {
+                
+              }
+          }
+          
+      }
+}      
+
+QUESTIONS:
+
+Write a program to check whether a string starts with a given character
+Write a program to replace a word in a string using scanner class
+
+--------------------------------------------------------------------------------------------------------
+
+STRING BUFFER: 
+Only one thread can modify at a time
+String buffer is thread safe	 
+Multiple thread will be handled but there is no thread safe and it is faster
+
+METHOD:
+
+1. insert()
+2. delete
+3. capacity
+4. replace
+5. reverse
+
+class- definition block or blue print that contains states and behaviour 
+[ states - data number or variables
+behavior - member function or method ]
+object - instance of class, it has own states and behaviour
+
+Example:
+
+package oops;
+
+class Car{
+    static String owner="java";
+     String carname="BMW";
+     void manufactureyear (int year){
+        System.out.println(year);
+     }
+
+}
+public class main{
+    public static void main(string[] args){
+        Car c=new car();
+        System.out.println(c.carname);
+        c.manufactureyear(2000);
+    }
+}
+----------------------- 
+ 
+CONSTRUCTOR :
+	 A constructor in java is a special method or member function used to initalise the object
+	 A constructor name and class name must be same 
+	 Constructor executes when we create an object of the class
+	 Constructor can't accept access modifiers and return type 
+
+example:
+ package constructor;
+
+public class demo { 
+    String Sname;
+	demo(String Sname){
+        this.Sname=Sname;
+     System.out.println(x:"this is constructor");
+}
+public static void main (String[] args){
+    demo d=new demo(Sname:"js");
+    System.out.println(d.Sname);
+}
+}
+-----------------------------------------------------
+Polymorphism 
+	one object showing different behavior in different stages of its life 	
+	we can achieve by using method overloading and method over ridding concept 
+method overloading: same method name but different parameters
+
+example :
+public class shoppingcart
+
+method over ridding : 
+same method name same parameters but subclass provides own implementation of its super class method
+ example:
+     Payment proceesing.java
+---------------------------------------------------------
+
+ENCAPSULATION:
+	process of wrapping data's and methods into single unit and hiding the data by making variables private and accessing them through public methods
+
+----------------------------------------------------
+Abstraction:
+
+	it is the process of hiding certain details and display only necessary information
+syntax:
+    abstract class classname{}
+	it can't achieve 100% abstraction in java
+	abstract class has concrete methods and abstract method does not have any implementation
+
+
+
+interface interfacename{
+//static or final - variable
+//abstract or default - method
+//interface to another class- implements
+}
+	

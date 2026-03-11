@@ -1,0 +1,64 @@
+Scanner class: to get input from the user
+
+scanner methods:  next() and nextLine() - to get string values
+                  Int()- to get the int value 
+                  Char()- to get the single character  
+                  nextchar
+
+
+Import statement: Import java.util.Scanner;
+scanner object : scanner reference variable= new Scanner(System.in)
+
+Example :
+import java.util.Scanner;
+class addno{
+public static void main (string[] args)
+Scanner reference variable =new Scanner(system.in);
+long number= ref.nextInt();
+System.out.printLine(number);
+}
+
+
+import java.util.Scanner;
+
+class ATM {
+
+public static void main(string [] args) {
+
+Scanner sc = new Scanner(System.in);
+
+int pin=1234;
+
+int tbal = 5000;
+
+System.out.println("enter pin");
+
+int current pin = sc.nextInt();
+
+if(currentpin==pin){
+
+System.out.println("enter amount");
+
+int want=sc.nextInt();
+
+if(want<=tbal) {
+
+System.out.println("withdraw Success");
+
+}
+
+else {
+
+System.out.println("Insufficient balance");
+
+}
+
+else {
+
+System.out.println("Invalid pin");
+
+}
+
+}
+
+}
